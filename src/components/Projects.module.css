@@ -1,0 +1,47 @@
+/* Projects.module.css */
+
+/* General card styling */
+.card {
+  background-color: #3b82f6; /* Blue background color */
+  border-radius: 1.5rem; /* Softer corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+  overflow: hidden; /* Ensures child elements respect the card boundaries */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  height: 500px; /* Taller card height */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Image styling */
+.card img {
+  border-radius: 1.5rem; /* Matches the card's border radius */
+  object-fit: cover; /* Ensures the image fills the area proportionally */
+  width: 100%; /* Full width */
+  height: 220px; /* Increased image height */
+}
+
+/* Title styling */
+.card p {
+  margin: 0; /* Removes default margin */
+}
+
+.card p:first-of-type {
+  color: #ffffff; /* White text for titles */
+  font-size: 1.25rem; /* Large, readable title font size */
+  font-weight: 600; /* Semi-bold for emphasis */
+  margin-top: 8rem; /* Added margin-top for space between image and title */
+  margin-bottom: 0.75rem; /* Spacing below the title */
+  text-align: center; /* Center-align text for better appearance */
+}
+
+/* Description styling */
+.card p:last-of-type {
+  color: #ffffff; /* White text for descriptions */
+  font-size: 1rem; /* Legible font size for body text */
+  line-height: 1.5; /* Ensures good readability */
+  margin-top: 1rem; /* Extra spacing from the title */
+  text-align: center; /* Center-align text for better appearance */
+}

@@ -1,0 +1,17 @@
+.navbar {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navLink {
+    color: gray; /* Default color */
+    transition: color 0.3s ease; /* Smooth color transition */
+    cursor: pointer;
+  }
+  
+  .navLink:hover,
+  .navLink:focus,
+  .navLink:active {
+    color: blue; /* Blue color on hover, focus, or active */
+  }
+  

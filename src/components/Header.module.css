@@ -1,0 +1,57 @@
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: rgb(236, 228, 228); /* Gray background for desktop */
+  }
+  
+  .logoImage {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 10px; /* Space between logo image and text */
+  }
+  
+  .logoText {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(8, 8, 216); /* Tiffany Blue for the logo text */
+  }
+  
+  .navLink {
+    color: blue; /* Initial blue color for links */
+    position: relative;
+    transition: color 0.3s ease, opacity 0.3s ease;
+  }
+  
+  /* Add cursor pointer only on screens medium and larger */
+  @media (min-width: 768px) {
+    .navLink {
+      cursor: pointer;
+    }
+  }
+  
+  /* Underline and color animation */
+  .navLink::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: blue; /* Blue underline color */
+    transition: width 0.3s ease;
+  }
+  
+  .navLink:hover {
+    color: blue; /* Text turns blue on hover */
+    opacity: 0.9; /* Slightly reduce opacity */
+  }
+  
+  .navLink:hover::after {
+    width: 100%; /* Expand underline width */
+  }
+  
+  button {
+    color: blue;
+  }
