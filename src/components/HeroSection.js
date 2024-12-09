@@ -10,7 +10,7 @@ function HeroSection() {
       <div className={styles.overlay}></div>
       <div className={styles.text}>
         <h1 className={styles.title}>Welcome to InDepth Engineering Limited</h1>
-        <p className={styles.subtitle}>Building the future with precision and passion</p>
+        <p className={styles.subtitle}>Building Beyond Borders, Shaping a Brighter Tomorrow</p>
       </div>
     </section>
   );

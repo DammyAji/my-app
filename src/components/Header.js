@@ -19,8 +19,8 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-gray-200 md:bg-gray-400 p-4 static">
-      <div className={`${styles.headerContainer}`}>
+    <header className="bg-gray-200 md:bg-gray-400 p-4 ">
+      <div className={`${styles.headerContainer} static`} >
         <div className="flex items-center">
           <img src={logo} alt="Company Logo" className={`${styles.logoImage}`} />
           <h1 className={`${styles.logoText}`}>InDepth Engineering Limited</h1>
@@ -48,6 +48,7 @@ const Header = () => {
           <a onClick={() => scrollToSection('#about')} className="p-2">About</a>
           <a onClick={() => scrollToSection('#services')} className="p-2">Services</a>
           <a onClick={() => scrollToSection('#projects')} className="p-2">Projects</a>
+          <a onClick={() => scrollToSection('#clients')} className="p-2">Clients</a>
           <a onClick={() => scrollToSection('#contact')} className="p-2">Contact</a>
         </div>
       )}

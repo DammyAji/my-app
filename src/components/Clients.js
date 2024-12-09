@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Clients.module.css';
-import Image from '../assets/CO.jpg';
-import Image1 from '../assets/CO.jpg';
+import Image from '../assets/ENVIPLAN.jpg';
+import Image1 from '../assets/FCT.jpg';
 import Image2 from '../assets/CO.jpg';
 import Image3 from '../assets/CO.jpg';
 

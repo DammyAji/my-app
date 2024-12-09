@@ -1,14 +1,25 @@
-/* AboutUs.module.css */
-.aboutUsContainer {
-    background-color: #f9f9f9; /* Light gray background for desktop */
-    color: #333333; /* Dark text color for readability */
-    padding: 2rem; /* Consistent padding */
-    line-height: 1.6; /* Optimal text readability */
-  }
-  
-  @media (min-width: 1024px) {
-    .aboutUsContainer {
-      padding: 4rem; /* Increased padding for larger screens */
-    }
-  }
-  
+.aboutUsSection {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text {
+  font-family: "Roboto", sans-serif; /* Consistent sharp font */
+  text-align: justify;
+  word-spacing: 1px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hiddenContent {
+  max-width: 80%;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif; /* Matches the write-up style */
+  font-size: 1.125rem; /* Sharp and legible font size */
+  color: #333;
+  line-height: 1.8;
+}

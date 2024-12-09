@@ -23,6 +23,9 @@ const Navbar = () => {
       <a href="#projects" onClick={() => handleScroll('projects')} className={styles.navLink}>
         Projects
       </a>
+      <a href="#clients" onClick={() => handleScroll('clients')} className={styles.navLink}>
+        Projects
+      </a>
       <a href="#contact" onClick={() => handleScroll('contact')} className={styles.navLink}>
         Contact
       </a>

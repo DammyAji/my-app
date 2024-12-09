@@ -1,63 +1,31 @@
-// src/components/CompanyOverview.js
-import React from 'react';
-import styles from './CompanyOverview.module.css';
-import image1 from '../assets/CO.jpg';
-import image2 from '../assets/CO.jpg';
-import image3 from '../assets/CO.jpg';
-import image4 from '../assets/CO.jpg';
+import React from "react";
+import styles from "./CompanyOverview.module.css";
 
 const CompanyOverview = () => {
-  const writeUps = [
-    {
-      heading: "Dedicated Team",
-      text: "We are a leading engineering company with a commitment to providing top-notch services. Our team of experts works tirelessly to bring innovative solutions to meet our clients' needs.     We are a leading engineering company with a commitment to providing top-notch services. Our team of      We are a leading engineering company with a commitment to providing top-notch services. Our team of       We are a leading engineering company with a commitment to providing top-notch services. Our team of       We are a leading engineering company with a commitment to providing top-notch services. Our team of         We are a leading engineering company with a commitment to providing top-notch services. Our team of         We are a leading engineering company with a commitment to providing top-notch services. Our team of           We are a leading engineering company with a commitment to providing top-notch services. Our team of             We are a leading engineering company with a commitment to providing top-notch services. Our team of                                We are a leading engineering company with a commitment to providing top-notch services. Our team of                We are a leading engineering company with a commitment to providing top-notch services. Our team of                     We are a leading engineering company with a commitment to providing top-notch services. Our team of                               We are a leading engineering company with a commitment to providing top-notch services. Our team of                            We are a leading engineering company with a commitment to providing top-notch services. Our team of                        We are a leading engineering company with a commitment to providing top-notch services. Our team of                  We are a leading engineering company with a commitment to providing top-notch services. Our team of ",
-      image: image1,
-      alt: "Engineering Team",
-    },
-    {
-      heading: "Quality Projects",
-      text: "With years of experience and a focus on quality, our projects stand as a testament to our dedication.",
-      image: image2,
-      alt: "Construction Project",
-    },
-    {
-      heading: "Sustainable Solutions",
-      text: "Our mission is to continue being a reliable partner, delivering sustainable engineering solutions.",
-      image: image3,
-      alt: "Sustainable Solutions",
-    },
-    {
-      heading: "Innovative Designs",
-      text: "Our innovative approach and precision in engineering drive us to excel in every project.",
-      image: image4,
-      alt: "Innovative Project Design",
-    },
+  const content = [
+    { heading: "Dedicated Team", image: "CO.jpg", text: "We are a project delivery company with extensive experience across the Civil and Geotechnical Engineering sectors, specializing in Infrastructure Development, Construction, and Environmental Solutions. Whatever your project requirements, we have the expertise to provide innovative and sustainable solutions tailored to your needs. Our team of professionals excels in Site Investigations, Foundation Engineering, Structural Analysis, and Soil Stabilization, as well as Environmental and Water Resources Engineering. With our broad range of capabilities and commitment to excellence, we are equipped to handle projects of any size or complexity, ensuring successful delivery every time." },
+    { heading: "Delivering excellence at every stage", image: "CO1.jpg", text: "We pride ourselves on offering cost-effective, timely, and sustainable solutions to our clients. Whether your project requires Foundation Design, Geotechnical Site Investigations, Structural Engineering, or Soil Stabilization Services, we are here to support you. Our unwavering commitment to excellence ensures that we deliver outstanding results that surpass your expectations at every step of your project journey." },
+    { heading: "Your goals, Our commitment", image: "CO2.jpg", text: "With our expertise in Civil Engineering Design, Construction Supervision, Geotechnical Analysis, and Infrastructure Maintenance, we are fully dedicated to your success. We understand the unique challenges of the civil and geotechnical engineering sectors and are ready to deliver innovative, practical solutions that advance your projects and drive long-term value." },
+    { heading: "Innovative Design for a Sustainable Future", image: "CO3.jpg", text: "Our approach to civil and geotechnical engineering revolves around creativity and innovation. We specialize in delivering cutting-edge designs for complex projects, incorporating advanced geotechnical analysis, sustainable materials, and state-of-the-art construction techniques. By blending technical expertise with forward-thinking solutions, we ensure that every project is not only functional but also resilient and environmentally conscious." },
   ];
 
   return (
-    <section className={`p-4 ${styles.companyOverview}`}>
-      <h2 className="text-2xl md:text-3xl text-center font-bold underline text-blue-600 mb-6">
-        Our Company Overview
-      </h2>
-      
-      <div className={styles.contentContainer}>
-        {writeUps.map((item, index) => (
-          <div 
-            key={index} 
-            className={`${styles.item} ${index % 2 === 0 ? styles.imageLeft : styles.imageRight}`}
-          >
-            <img 
-              src={item.image} 
-              alt={item.alt} 
-              className={styles.image}
-            />
-            <div className={styles.writeUp}>
-              <h3 className="text-blue-600 font-semibold">{item.heading}</h3>
-              <p>{item.text}</p>
-            </div>
+    <section className={styles.companyOverview}>
+      <h2 className={styles.heading}>Company Overview</h2>
+      {content.map((item, index) => (
+        <div
+          key={index}
+          className={`${styles.overviewItem} ${index % 2 === 0 ? styles.flexRow : styles.flexRowReverse}`}
+        >
+          <div className={styles.textContent}>
+            <h3>{item.heading}</h3>
+            <p>{item.text}</p>
           </div>
-        ))}
-      </div>
+          <div className={styles.imageContainer}>
+            <img src={require(`../assets/${item.image}`)} alt={item.heading} className={styles.image} />
+          </div>
+        </div>
+      ))}
     </section>
   );
 };

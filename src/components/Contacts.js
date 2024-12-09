@@ -1,15 +1,15 @@
-import React from 'react';
-import styles from './Contacts.module.css'; // Importing the CSS module
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import React from "react";
+import styles from "./Contacts.module.css"; // Importing the CSS module
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <section className={`bg-gray-200 p-8 ${styles.contactSection}`}>
+    <section className={`bg-white-200 p-8 ${styles.contactSection}`} id="contact">
       <h2 className="text-3xl font-semibold text-center text-blue-600 mb-8">Contact Us</h2>
 
-      <div className="flex flex-col md:flex-row md:justify-between gap-8">
+      <div className="flex flex-col md:flex-row md:justify-between gap-8 items-center">
         {/* Contact Form */}
-        <form className={`${styles.form} bg-white shadow-md p-6 rounded-lg flex-1`}>
+        <form className={`${styles.form} bg-white shadow-md p-6 rounded-lg`} style={{ width: "80%" }}>
           <label className="block mb-4">
             <span className="text-blue-600">Name</span>
             <input type="text" className={`${styles.input}`} placeholder="Your Name" required />
@@ -28,27 +28,29 @@ const Contact = () => {
         </form>
 
         {/* Contact Information */}
-        <div className="bg-white shadow-md p-6 rounded-lg flex-1">
-   dddr0rdr-r5-55e4        <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <FaMapMarkerAlt className="text-blue-600" />
-              <span className="text-blue-600">123 Engineering Road, Tech City</span>
+        <div className="bg-white shadow-none p-6 rounded-lg" style={{ width: "80%" }}>
+          <div className="space-y-4">
+            <div className="flex items-center gap-3">
+              <FaMapMarkerAlt className="text-blue-600" size={28} />
+              <span className="text-blue-600 text-lg font-medium">13c Waziri Ibrahim Crescent,
+              Abakpa Gra, Kaduna.</span>
             </div>
-            <div className="flex items-center gap-2">
-              <FaPhoneAlt className="text-blue-600" />
-              <span className="text-blue-600">+123 456 7890</span>
+            <div className="flex items-center gap-3">
+              <FaPhoneAlt className="text-blue-600" size={28} />
+              <span className="text-blue-600 text-lg font-medium"> +234 803 7044 648
+              +234 807 6702 298</span>
             </div>
-            <div className="flex items-center gap-2">
-              <FaEnvelope className="text-blue-600" />
-              <span className="text-blue-600">info@indeptheng.com</span>
+            <div className="flex items-center gap-3">
+              <FaEnvelope className="text-blue-600" size={28} />
+              <span className="text-blue-600 text-lg font-medium">indepthgt@yahoo.com</span>
             </div>
           </div>
 
           {/* Social Media Icons */}
-          <div className="flex gap-4 mt-6">
-            <FaFacebook className="text-blue-600 cursor-pointer hover:text-blue-800" size={24} />
-            <FaTwitter className="text-blue-600 cursor-pointer hover:text-blue-800" size={24} />
-            <FaLinkedin className="text-blue-600 cursor-pointer hover:text-blue-800" size={24} />
+          <div className="flex gap-6 mt-6">
+            <FaFacebook className="text-blue-600 cursor-pointer hover:text-blue-800" size={32} />
+            <FaLinkedin className="text-blue-600 cursor-pointer hover:text-blue-800" size={32} />
+            <FaWhatsapp className="text-blue-600 cursor-pointer hover:text-blue-800" size={32} />
           </div>
         </div>
       </div>

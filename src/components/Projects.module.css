@@ -2,7 +2,7 @@
 
 /* General card styling */
 .card {
-  background-color: #3b82f6; /* Blue background color */
+  background-color:  lightgray; /* Blue background color */
   border-radius: 1.5rem; /* Softer corners */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow */
   overflow: hidden; /* Ensures child elements respect the card boundaries */
@@ -29,7 +29,7 @@
 }
 
 .card p:first-of-type {
-  color: #ffffff; /* White text for titles */
+  color: black; /* White text for titles */
   font-size: 1.25rem; /* Large, readable title font size */
   font-weight: 600; /* Semi-bold for emphasis */
   margin-top: 8rem; /* Added margin-top for space between image and title */
@@ -39,7 +39,7 @@
 
 /* Description styling */
 .card p:last-of-type {
-  color: #ffffff; /* White text for descriptions */
+  color: black; /* White text for descriptions */
   font-size: 1rem; /* Legible font size for body text */
   line-height: 1.5; /* Ensures good readability */
   margin-top: 1rem; /* Extra spacing from the title */

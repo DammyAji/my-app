@@ -1,77 +1,66 @@
 .companyOverview {
-  padding: 20px;
+  padding: 2rem;
+  background-color: #f9f9f9;
 }
 
-.contentContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+.heading {
+  font-size: 2.5rem; /* Larger main heading font */
+  color: #007acc; /* Matches your blue color */
+  text-align: center;
+  margin-bottom: 2rem;
+  text-decoration: none;
 }
 
-.item {
+.overviewItem {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem; /* Adds spacing between text and image */
+}
+
+.flexRow {
+  flex-direction: row;
+}
+
+.flexRowReverse {
+  flex-direction: row-reverse;
+}
+
+/* Mobile view: stack vertically with image first */
+@media (max-width: 768px) {
+  .overviewItem {
+    flex-direction: column;
+  }
+}
+
+.textContent {
+  flex: 1;
+  padding: 1rem;
+  font-family: "Segoe UI", Arial, sans-serif; /* More modern and legible font */
+  text-align: left;
+}
+
+.textContent h3 {
+  font-size: 2rem; /* Larger heading font size for better visibility */
+  color: #007acc; /* Matches your blue color */
+  margin-bottom: 1rem;
+}
+
+.textContent p {
+  font-size: 1.125rem; /* Slightly larger for better readability */
+  color: #333; /* Darker color for sharper text */
+  line-height: 1.75; /* Better line spacing for legibility */
+  text-align: justify; /* Ensures alignment for multi-line text */
+}
+
+.imageContainer {
+  flex: 1;
+  padding: 1rem;
+  text-align: center;
 }
 
 .image {
-  width: 100%;
+  max-width: 100%;
   height: auto;
   border-radius: 8px;
-  margin-bottom: 0.5rem;
-}
-
-.writeUp {
-  text-align: center;
-  color: #333;
-}
-
-.writeUp h3 {
-  font-size: 1.5rem; /* Large font size for heading on mobile */
-  color: #1d4ed8;
-  margin-bottom: 0.5rem;
-}
-
-.writeUp p {
-  font-size: 1rem; /* Legible font size for text content */
-  color: #000;
-}
-
-@media (min-width: 768px) {
-  .contentContainer {
-    gap: 2rem;
-  }
-
-  .item {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .imageLeft .image {
-    order: 1;
-    width: 50%;
-    height: 100%; /* Set height to match content for equal layout */
-    margin-right: 1rem;
-  }
-
-  .imageRight .image {
-    order: 2;
-    width: 50%;
-    height: 100%; /* Set height to match content for equal layout */
-    margin-left: 1rem;
-  }
-
-  .writeUp {
-    text-align: left;
-    width: 50%;
-    font-size: 3rem; /* Increase font size for laptop screens */
-  }
-
-  .writeUp h3 {
-    font-size: 2rem; /* Larger heading font size for laptop screens */
-  }
-
-  .writeUp p {
-    font-size: 1.125rem; /* Larger, more legible font size */
-  }
 }

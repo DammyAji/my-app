@@ -5,10 +5,15 @@ const Services = () => {
   const [openServiceIndex, setOpenServiceIndex] = useState(null);
 
   const services = [
-    { title: "Engineering Consulting", content: "Comprehensive engineering solutions tailored to your project." },
-    { title: "Project Management", content: "Efficient planning, execution, and management of engineering projects." },
-    { title: "Structural Design", content: "Innovative and safe structural design services." },
-    { title: "Feasibility Studies", content: "Detailed project feasibility analysis to ensure successful outcomes." },
+    { title: "Subsoil Investigation for buildings", content: "Comprehensive engineering solutions tailored to your project." },
+    { title: "DeepSoil Investigation for bridges", content: "Efficient planning, execution, and management of engineering projects." },
+    { title: "Geotechnical Investigationfordams,dykes, embankment and Land fill sites", content: "Innovative and safe structural design services." },
+    { title: "Bridge construction", content: "Detailed project feasibility analysis to ensure successful outcomes." },
+    { title: "Airport pavement design", content: "Detailed project feasibility analysis to ensure successful outcomes." },
+    { title: "Road geometry and pavement design", content: "Detailed project feasibility analysis to ensure successful outcomes." },
+    { title: "Pavement evaluation and material survey for road", content: "Detailed project feasibility analysis to ensure successful outcomes." },
+    { title: "RouteSoils and materials Survey for roads", content: "Detailed project feasibility analysis to ensure successful outcomes." },
+    
   ];
 
   const toggleService = (index) => {
@@ -16,7 +21,7 @@ const Services = () => {
   };
 
   return (
-    <section className={`${styles.servicesSection} bg-blue-0 p-8`}>
+    <section className={`${styles.servicesSection} bg-blue-0 p-8`} id= "services">
       {/* Heading */}
       <h2 className="text-white text-3xl font-bold uppercase mb-8">Services We Offer</h2>
 

@@ -1,0 +1,11 @@
+.footer {
+    background-color: #1e3a8a; /* Blue-800 */
+    color: white;
+    padding: 10px; /* Reduced padding to decrease height */
+    font-size: 0.875rem; /* Slightly smaller text */
+    height: 25px; /* Half the height of the original */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
