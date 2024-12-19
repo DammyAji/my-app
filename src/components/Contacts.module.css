@@ -1,5 +1,6 @@
 .contactSection {
   padding: 20px;
+  background-color: lightgray; /* Light gray background */
 }
 
 /* Form Styles */
@@ -7,7 +8,7 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  border: 2px solid #2563eb; /* Thicker blue border */
+  border: 4px solid blue; /* Thicker blue border */
   border-radius: 8px;
 }
 
@@ -15,21 +16,38 @@
 .textarea {
   width: 100%;
   padding: 10px;
-  border: 2px solid #2563eb; /* Thicker blue border for inputs */
+  border: 4px solid blue; /* Thicker blue border for inputs */
   border-radius: 4px;
   font-size: 1rem;
   color: #4a5568;
+  background-color: lightgray;
 }
 
 .input:focus,
 .textarea:focus {
   outline: none;
-  border-color: #1d4ed8; /* Darker blue on focus */
+  border-color: blue; /* Darker blue on focus */
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
   .contactSection {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .form {
+    width: 95%;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .form,
+  .contactInfo {
+    align-items: center;
+    text-align: center;
   }
 }

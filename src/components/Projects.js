@@ -2,9 +2,9 @@
 import React from 'react';
 import styles from './Projects.module.css'; // Importing the CSS module
 import projectImage1 from '../assets/CO.jpg'; // Replace with actual image paths
-import projectImage2 from '../assets/CO.jpg';
-import projectImage3 from '../assets/CO.jpg';
-import projectImage4 from '../assets/CO.jpg';
+import projectImage2 from '../assets/projects1.jpg';
+import projectImage3 from '../assets/projects2.jpg';
+import projectImage4 from '../assets/projects3.jpg';
 
 const Projects = () => {
   return (

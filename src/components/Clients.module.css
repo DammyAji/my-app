@@ -25,26 +25,32 @@
   overflow: hidden; /* Hides content outside the container */
   width: 100%;
   height: 220px; /* Adjust height for better visibility */
+  border-top: 1px solid #007bff; /* Thin blue border at the top */
+  border-bottom: 1px solid #007bff; /* Thin blue border at the bottom */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* White overlay effect */
+/* Overlay effect */
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(168, 159, 159, 0.7); /* White overlay with transparency */
+  background-color: rgba(249, 249, 249, 0.3); /* Slight opacity overlay matching background */
   z-index: 2; /* Places overlay above images */
+  pointer-events: none; /* Prevent interaction */
 }
 
 /* Carousel animation and layout */
 .carousel {
   display: flex;
   align-items: center;
-  animation: marquee 20s linear infinite; /* Smooth average-speed animation */
-  position: absolute;
+  animation: marquee 40s linear infinite; /* Slower animation */
   z-index: 1; /* Places images below the overlay */
+  margin: auto; /* Centers the carousel in its container */
 }
 
 /* Individual client image styling */
@@ -53,16 +59,21 @@
   width: 180px; /* Large size for visibility */
   height: 180px;
   margin: 0 25px; /* Space between images */
-  border-radius: 50%; /* Circular shape */
-  overflow: hidden; /* Ensures images stay inside circular frame */
+  overflow: hidden; /* Ensures images stay inside container */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50%; /* Makes the container circular */
+  background-color: #fff; /* Optional background color to match the design */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centers the image */
 }
 
 .clientImage img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease-in-out;
+  object-fit: cover; /* Ensures the image fully fills the circle */
+  border-radius: 50%; /* Ensures the image itself is circular */
+  transition: transform 0.9s ease-in-out;
 }
 
 .clientImage:hover img {

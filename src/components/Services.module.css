@@ -1,4 +1,3 @@
-/* Main section */
 .servicesSection {
   background-color: rgb(1, 1, 78); /* Blue background */
   color: #ffffff; /* White text */
@@ -6,26 +5,10 @@
   text-align: center;
 }
 
-/* Heading styling */
-.heading {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 20px; /* Space between heading and services */
-}
-
-/* Services list container */
-.servicesList {
-  display: flex;
-  flex-direction: column; /* Stack services vertically */
-  align-items: center;
-  gap: 1.5rem; /* Space between service items */
-}
-
 /* Individual service item */
 .serviceItem {
   background-color: #d3d3d3; /* Light gray background */
   color: #ffffff; /* White text for headings */
-  width: 80%;
   padding: 1rem;
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
@@ -33,34 +16,40 @@
   transition: background-color 0.3s ease;
 }
 
+/* Align multi-line headings */
+.serviceHeader {
+  display: flex;
+  align-items: center; /* Align bullet and text vertically */
+  font-weight: bold; /* Thick font */
+  line-height: 1.2; /* Adjust spacing for multi-line alignment */
+  text-align: left;
+}
+
+/* Media queries for different screen sizes */
+@media (min-width: 1024px) {
+  .serviceItem {
+    width: 90%; /* Wider divs for laptop screens */
+    margin: 0 auto; /* Centered with padding for compactness */
+  }
+}
+
+@media (max-width: 768px) {
+  .serviceItem {
+    width: 95%; /* Increased width for mobile screens */
+    height: auto; /* Adjust height */
+    padding: 1rem 0.5rem; /* Adjust padding for smaller screens */
+  }
+}
+
 /* Hover effect for service item */
 .serviceItem:hover {
   background-color: #b0b0b0; /* Darker gray on hover */
 }
 
-/* Header of each service */
-.serviceHeader {
-  display: flex;
-  align-items: center; /* Align bullet and text vertically */
-  font-weight: bold; /* Thick font for bullet and heading */
-}
-
-/* Bullet styling */
-.bullet {
-  margin-right: 10px; /* Space between bullet and heading */
-  font-size: 24px; /* Size of the bullet */
-  font-weight: bold; /* Thick font */
-}
-
-/* Service title */
-.serviceTitle {
-  font-size: 20px; /* Heading size */
-}
-
 /* Dropdown content */
 .serviceContent {
-  margin-top: 10px; /* Space between heading and content */
-  text-align: left; /* Align content text to the left */
+  text-align: left; /* Align content to the left */
+  margin-top: 10px;
   font-size: 16px; /* Smaller font for content */
   line-height: 1.5; /* Better readability */
 }

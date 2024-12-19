@@ -1,9 +1,18 @@
 import React from 'react';
 import styles from './Clients.module.css';
-import Image from '../assets/ENVIPLAN.jpg';
-import Image1 from '../assets/FCT.jpg';
-import Image2 from '../assets/CO.jpg';
-import Image3 from '../assets/CO.jpg';
+import Image1 from '../assets/bua.jpg';
+import Image2 from '../assets/FCT.jpg';
+import Image3 from '../assets/clients1.jpg';
+import Image4 from '../assets/clients.jpg'; // Add as many images as you like
+import Image5 from '../assets/fsd.jpg'
+import Image6 from '../assets/china.jpg'
+import Image7 from '../assets/works.jpg'
+import Image8 from '../assets/smc.jpg'
+import Image9 from '../assets/ENVIPLAN.jpg'
+
+
+// Array of client images
+const clientImages = [Image1, Image2, Image3, Image4, Image5, Image6, Image7 ,Image8, Image9 ];
 
 const Clients = () => {
   return (
@@ -15,21 +24,14 @@ const Clients = () => {
 
       {/* Carousel Section */}
       <div className={styles.carouselWrapper}>
-        <div className={styles.overlay}></div>
         <div className={styles.carousel}>
-          <div className={styles.clientImage}>
-            <img src={Image} alt="Client 1" />
-          </div>
-          <div className={styles.clientImage}>
-            <img src={Image1} alt="Client 2"/>
-          </div>
-          <div className={styles.clientImage}>
-            <img src={Image2} alt="Client 3" />
-          </div>
-          <div className={styles.clientImage}>
-            <img src={Image3} alt="Client 4" />
-          </div>
+          {clientImages.map((image, index) => (
+            <div className={styles.clientImage} key={index}>
+              <img src={image} alt={`Client ${index + 1}`} />
+            </div>
+          ))}
         </div>
+        <div className={styles.overlay}></div>
       </div>
     </section>
   );

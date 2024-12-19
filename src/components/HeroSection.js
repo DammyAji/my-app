@@ -1,7 +1,7 @@
 // src/components/HeroSection.js
 import React from 'react';
 import styles from './HeroSection.module.css';
-import heroImage from '../assets/hero-image.jpg'; // replace with your image path
+import heroImage from '../assets/rock.jpg'; // replace with your image path
 
 function HeroSection() {
   return (

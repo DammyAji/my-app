@@ -1,66 +1,57 @@
-.companyOverview {
-  padding: 2rem;
-  background-color: #f9f9f9;
+/* CompanyOverview.module.css */
+
+/* General section styling */
+.section {
+  margin: 2rem 0; /* Add vertical spacing between sections */
 }
 
-.heading {
-  font-size: 2.5rem; /* Larger main heading font */
-  color: #007acc; /* Matches your blue color */
-  text-align: center;
-  margin-bottom: 2rem;
-  text-decoration: none;
+/* Images */
+img {
+  border-radius: 10px; /* Slightly round the corners of the images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  width: 300px;
+  height: 500px
 }
 
-.overviewItem {
-  display: flex;
-  align-items: center;
-  margin-bottom: 2rem;
-  gap: 1rem; /* Adds spacing between text and image */
+img:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
 }
 
-.flexRow {
-  flex-direction: row;
-}
+/* Flex layouts */
+@media (min-width: 768px) {
+  .odd {
+    justify-content: space-between; /* Adjust spacing for odd sections */
+  }
 
-.flexRowReverse {
-  flex-direction: row-reverse;
-}
-
-/* Mobile view: stack vertically with image first */
-@media (max-width: 768px) {
-  .overviewItem {
-    flex-direction: column;
+  .even {
+    justify-content: space-between; /* Adjust spacing for even sections */
   }
 }
 
-.textContent {
-  flex: 1;
-  padding: 1rem;
-  font-family: "Segoe UI", Arial, sans-serif; /* More modern and legible font */
-  text-align: left;
+/* Typography */
+h2 {
+  text-decoration: underline;
+  text-underline-offset: 5px; /* Increase space between text and underline */
+  text-decoration-thickness: 2px; /* Thicker underline for better visibility */
 }
 
-.textContent h3 {
-  font-size: 2rem; /* Larger heading font size for better visibility */
-  color: #007acc; /* Matches your blue color */
-  margin-bottom: 1rem;
+p {
+  line-height: 1.6; /* Improve readability with increased line spacing */
 }
 
-.textContent p {
-  font-size: 1.125rem; /* Slightly larger for better readability */
-  color: #333; /* Darker color for sharper text */
-  line-height: 1.75; /* Better line spacing for legibility */
-  text-align: justify; /* Ensures alignment for multi-line text */
-}
+/* Mobile-specific styles */
+@media (max-width: 767px) {
+  .section {
+    text-align: center; /* Center-align text for smaller screens */
+  }
 
-.imageContainer {
-  flex: 1;
-  padding: 1rem;
-  text-align: center;
-}
+  h2 {
+    margin-bottom: 1rem; /* Adjust spacing for headings */
+  }
 
-.image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+  p {
+    margin-bottom: 1.5rem; /* Adjust spacing for paragraphs */
+  }
 }

@@ -1,20 +1,35 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "./AboutUs.module.css";
 
 const AboutUs = () => {
-  const [visibleSection, setVisibleSection] = useState(null);
+  const visionRef = useRef(null);
+  const missionRef = useRef(null);
 
-  const toggleSection = (section) => {
-    setVisibleSection(visibleSection === section ? null : section);
+  const handleScroll = () => {
+    const visionPos = visionRef.current.getBoundingClientRect().top;
+    const missionPos = missionRef.current.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (visionPos < windowHeight) {
+      visionRef.current.classList.add(styles.animateFromLeft);
+    }
+    if (missionPos < windowHeight) {
+      missionRef.current.classList.add(styles.animateFromRight);
+    }
   };
 
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <section className={`${styles.aboutUsSection} bg-white py-10 px-5 md:px-20` } id="about">
+    <section className={`${styles.aboutUsSection} bg-white py-10 px-5 md:px-20`} id="about">
       <h2 className="text-blue-400 text-3xl font-bold text-center underline-offset-8 mb-6">
         About Us
       </h2>
       <p className={`${styles.text} text-gray-800 text-lg leading-8`}>
-        Indepth Engineering Limited is a dynamic, client-focused Civil and Geotechnical Engineering consultancy firm.
+        Indepth Engineering Limited, established 4th October, 2006 is a dynamic,client-focused Civil and Geotechnical Engineering consultancy firm.
         Our services encompass specialist engineering solutions in building foundations, bridge construction,
         geotechnical investigations for dams, landfills, and much more.
       </p>
@@ -28,37 +43,35 @@ const AboutUs = () => {
         roads, pavement evaluation, and comprehensive civil and geotechnical services. Indepth Engineering is here
         to ensure the success of your next infrastructure project.
       </p>
+      <p className={`${styles.text} text-gray-800 text-lg leading-8 mt-4`}>
+        Our team believes in driving innovation and sustainability. We leverage the latest technology and methodologies
+        to achieve excellence in all our projects, ensuring a greener and more efficient future.
+      </p>
 
-      {/* Mission and Vision Section */}
       <div className="flex flex-col md:flex-row justify-center items-center gap-8 mt-8">
-        {/* Mission */}
-        <div className="w-full md:w-1/2">
-          <div
-            className="cursor-pointer bg-blue-400 hover:bg-blue-800 text-white text-center py-4 rounded transition-all duration-300 font-semibold text-lg"
-            onClick={() => toggleSection("mission")}
-          >
-            Our Mission
+        <div
+          ref={visionRef}
+          className={`w-full md:w-1/2 bg-white text-center rounded transition-all ${styles.hiddenContent}`}
+        >
+          <div className={`${styles.heading} bg-blue-400 text-white py-3`}>
+            <h3 className="text-xl font-bold">Our Vision</h3>
           </div>
-          {visibleSection === "mission" && (
-            <div className="bg-gray-100 text-gray-800 text-lg p-6 rounded shadow-md mt-4 mx-auto w-4/5 text-center font-roboto leading-relaxed">
-              To apply ourselves thorougly,entirely,innovatively and appropriately to all our activities,running the gamut from the routine to the most complex of projects.
-            </div>
-          )}
+          <p className={`${styles.statement} mt-4 p-6`}>
+            To become a global brand and a standard reference point in the infrastructural development business in
+            general and foundation engineering in particular.
+          </p>
         </div>
-
-        {/* Vision */}
-        <div className="w-full md:w-1/2">
-          <div
-            className="cursor-pointer bg-blue-400 hover:bg-blue-800 text-white text-center py-4 rounded transition-all duration-300 font-semibold text-lg"
-            onClick={() => toggleSection("vision")}
-          >
-            Our Vision
+        <div
+          ref={missionRef}
+          className={`w-full md:w-1/2 bg-white text-center rounded transition-all ${styles.hiddenContent}`}
+        >
+          <div className={`${styles.heading} bg-blue-400 text-white py-3`}>
+            <h3 className="text-xl font-bold">Our Mission</h3>
           </div>
-          {visibleSection === "vision" && (
-            <div className="bg-gray-100 text-gray-800 text-lg p-6 rounded shadow-md mt-4 mx-auto w-4/5 text-center font-roboto leading-relaxed">
-            To become a global brand and a standard reference point in the infrastructural developement business in general and foundation engineering in particular.
-            </div>
-          )}
+          <p className={`${styles.statement} mt-4 p-6`}>
+            To apply ourselves thoroughly, entirely, innovatively, and appropriately to all our activities, running
+            the gamut from the routine to the most complex of projects.
+          </p>
         </div>
       </div>
     </section>

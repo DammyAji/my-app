@@ -4,22 +4,48 @@
 }
 
 .text {
-  font-family: "Roboto", sans-serif; /* Consistent sharp font */
+  font-family: "Roboto", sans-serif;
   text-align: justify;
   word-spacing: 1px;
 }
 
-.flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.statement {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  color: #333;
+  line-height: 1.8;
 }
 
 .hiddenContent {
-  max-width: 80%;
-  margin: 0 auto;
-  font-family: "Roboto", sans-serif; /* Matches the write-up style */
-  font-size: 1.125rem; /* Sharp and legible font size */
-  color: #333;
-  line-height: 1.8;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.animateFromLeft {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animateFromRight {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.heading {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .hiddenContent {
+    transform: translateY(50px);
+  }
+
+  .animateFromLeft,
+  .animateFromRight {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
