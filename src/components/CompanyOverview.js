@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './CompanyOverview.module.css';
 import Image1 from '../assets/projects1.jpg';
 import Image2 from '../assets/CO1.jpg';
-import Image3 from '../assets/CO2.jpg';
+import Image3 from '../assets/CO4.jpg';
 import Image4 from '../assets/CO.jpg';
 
 const CompanyOverview = () => {

@@ -4,7 +4,7 @@ import Image1 from '../assets/bua.jpg';
 import Image2 from '../assets/FCT.jpg';
 import Image3 from '../assets/clients1.jpg';
 import Image4 from '../assets/clients.jpg'; // Add as many images as you like
-import Image5 from '../assets/fsd.jpg'
+import Image5 from '../assets/fcd.jpg'
 import Image6 from '../assets/china.jpg'
 import Image7 from '../assets/works.jpg'
 import Image8 from '../assets/smc.jpg'
