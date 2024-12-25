@@ -12,7 +12,7 @@ const CompanyOverview = () => {
       <div className={`flex flex-col md:flex-row items-center ${styles.section} md:odd:flex-row-reverse`}>
         <div className="md:w-1/2 p-4">
           <h2 className="text-blue-600 text-2xl md:text-4xl font-semibold mb-4">Dedicated Team</h2>
-          <p className="text-gray-600 text-md md:text-lg leading-relaxed">
+          <p className="text-blue-800 text-md md:text-lg leading-relaxed">
           We are a project delivery company with extensive experience across the Civil and Geotechnical Engineering sectors, specializing in Infrastructure Development, Construction, and Environmental Solutions. Whatever your project requirements, we have the expertise to provide innovative and sustainable solutions tailored to your needs. Our team of professionals excels in Site Investigations, Foundation Engineering, Structural Analysis, and Soil Stabilization, as well as Environmental and Water Resources Engineering. With our broad range of capabilities and commitment to excellence, we are equipped to handle projects of any size or complexity, ensuring successful delivery every time
           </p>
         </div>
